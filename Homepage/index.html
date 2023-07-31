@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motul</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../Assets/logo/motulRed.ico" />
+  </head>
+  <body>
+    <div class="mobile">
+      <img src="../Assets/background/Vector1.png" class="imageBackground1" />
+      <img src="../Assets/background/Vector2.png" class="imageBackground2" />
+      <img src="../Assets/background/Vector1.png" class="imageBackground3" />
+      <div class="navbar">
+        <div class="navbarContainer">
+          <img
+            src="../Assets/logo/logoWithRedBackground.jpg"
+            onclick="window.location.href='../Homepage/index.html'"
+            class="navbarLogo"
+          />
+          <img
+            src="../Assets/avatar/avatarProfile.png"
+            onclick="togglePopUp()"
+            class="navbarAvatar"
+          />
+        </div>
+        <div class="modalPopUp">
+          <div
+            class="modalPopUpMenu"
+            onclick="window.location.href='../Profile/index.html'"
+          >
+            <div class="modalPopUpAvatar">
+              <img src="../Assets/avatar/avatarProfile.png" />
+            </div>
+            <p class="modalPopUpName">Maulana</p>
+          </div>
+          <div
+            class="modalPopUpMenu LastPopUp"
+            onclick="window.location.href='../Login/index.html'"
+          >
+            <div class="modalPopUpAvatar">
+              <img src="../Assets/icon/logout.png" />
+            </div>
+            <p class="modalPopUpName">Logout</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay" onclick="togglePopUp()"></div>
+      <div class="container">
+        <p class="welcomeText">hi, Maulana</p>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img
+                src="../Assets/imageCarousel/image1.jpg"
+                alt="Image 1"
+                class="carouselImg"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="../Assets/imageCarousel/image2.jpg"
+                alt="Image 2"
+                class="carouselImg"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="../Assets/imageCarousel/image3.jpg"
+                alt="Image 3"
+                class="carouselImg"
+              />
+            </div>
+            <!-- Add more carousel-slide elements for additional images -->
+          </div>
+        </div>
+        <p class="menuTitle">Your Activities</p>
+        <div class="activities">
+          <div class="menuContainer" onclick="toggleMenu('Field')">
+            <div
+              class="menuImage"
+              style="
+                background-image: url('../Assets/menuImage/fieldForceManagement.jpg');
+              "
+            >
+              <div class="overlayMenuContainer">
+                <img src="../Assets/menuImage/iconFieldForceManagement.png" />
+              </div>
+            </div>
+            <p class="menuName">
+              <span class="menuNameField" id="menuName"
+                >Field Force Management</span
+              >
+            </p>
+          </div>
+          <div class="menuContainer" onclick="toggleMenu('Market')">
+            <div
+              class="menuImage"
+              style="
+                background-image: url('../Assets/menuImage/marketActivity.jpg');
+              "
+            >
+              <div class="overlayMenuContainer">
+                <img src="../Assets/menuImage/iconMarketActivity.png" />
+              </div>
+            </div>
+            <p class="menuName">
+              <span class="menuNameMarket" id="menuName">Market Activity</span>
+            </p>
+          </div>
+        </div>
+        <div class="subMenuField" id="subMenu">
+          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+            <div class="subMenuImageContainer">
+              <img src="../Assets/icon/sales_review.png" class="subMenuImage" />
+            </div>
+            <p class="subMenuName">Sales Review</p>
+          </div>
+          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+            <div class="subMenuImageContainer">
+              <img
+                src="../Assets/icon/business_review.png"
+                class="subMenuImage"
+              />
+            </div>
+            <p class="subMenuName">Business Review</p>
+          </div>
+          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+            <div class="subMenuImageContainer">
+              <img
+                src="../Assets/icon/adminitration_work.png"
+                class="subMenuImage"
+              />
+            </div>
+            <p class="subMenuName">Adminitration Work</p>
+          </div>
+        </div>
+        <div class="subMenuMarket" id="subMenu">
+          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+            <div class="subMenuImageContainer">
+              <img src="../Assets/icon/join_visit.png" class="subMenuImage" />
+            </div>
+            <p class="subMenuName">Join Visit</p>
+          </div>
+          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+            <div class="subMenuImageContainer">
+              <img
+                src="../Assets/icon/field_tracking.png"
+                class="subMenuImage"
+              />
+            </div>
+            <p class="subMenuName">Field Tracking</p>
+          </div>
+          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+            <div class="subMenuImageContainer">
+              <img
+                src="../Assets/icon/account_development.png"
+                class="subMenuImage"
+              />
+            </div>
+            <p class="subMenuName">Account Development</p>
+          </div>
+        </div>
+        <div class="dashboard">
+          <p
+            class="dashboardName underline dashboardTime"
+            id="dashboardTop"
+            onclick="toggleDashboardTop('Time')"
+          >
+            Time Spend Activity
+          </p>
+          <p
+            class="dashboardName dashboardField"
+            id="dashboardTop"
+            onclick="toggleDashboardTop('Field')"
+          >
+            Field Force Management
+          </p>
+          <p
+            class="dashboardName dashboardAccount"
+            id="dashboardTop"
+            onclick="toggleDashboardTop('Account')"
+          >
+            Account Development
+          </p>
+        </div>
+        <div class="dashboardContent">
+          <p>hello world</p>
+        </div>
+        <div class="dashboard">
+          <p
+            class="dashboardName underline dashboardMarket"
+            id="dashboardBottom"
+            onclick="toggleDashboardBottom('Market')"
+          >
+            Market Activity
+          </p>
+          <p
+            class="dashboardName dashboardSalesman"
+            id="dashboardBottom"
+            onclick="toggleDashboardBottom('Salesman')"
+          >
+            Salesman Rating
+          </p>
+          <p
+            class="dashboardName dashboardDashboard"
+            id="dashboardBottom"
+            onclick="toggleDashboardBottom('Dashboard')"
+          >
+            Dashboard 6
+          </p>
+        </div>
+        <div class="dashboardContent">
+          <p>hello world</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

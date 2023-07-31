@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../Assets/logo/motulRed.ico" />
+  </head>
+  <body>
+    <div class="mobile">
+      <img src="../Assets/background/Vector1.png" class="imageBackground1" />
+      <img src="../Assets/background/Vector2.png" class="imageBackground2" />
+      <div class="navbar">
+        <div class="navbarContainer">
+          <img
+            src="../Assets/logo/logoWithRedBackground.jpg"
+            onclick="window.location.href='../Homepage/index.html'"
+            class="navbarLogo"
+          />
+          <img
+            src="../Assets/avatar/avatarProfile.png"
+            class="navbarAvatar"
+            onclick="togglePopUp()"
+          />
+        </div>
+        <div class="modalPopUp">
+          <div
+            class="modalPopUpMenu"
+            onclick="window.location.href='../Profile/index.html'"
+          >
+            <img
+              src="../Assets/avatar/avatarProfile.png"
+              class="modalPopUpAvatar"
+            />
+
+            <p class="modalPopUpName">Maulana</p>
+          </div>
+          <div
+            class="modalPopUpMenu LastPopUp"
+            onclick="window.location.href='../Login/index.html'"
+          >
+            <div class="modalPopUpAvatar">
+              <img src="../Assets/icon/logout.png" />
+            </div>
+            <p class="modalPopUpName">Logout</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" onclick="togglePopUp()"></div>
+      <div class="container">
+        <div
+          class="backButton"
+          onclick="window.location.href='../Homepage/index.html'"
+        >
+          <img src="../Assets/icon/back.png" />
+        </div>
+        <div class="profileContainer">
+          <img src="../Assets/avatar/avatarProfile.png" class="avatarProfile" />
+          <div class="avatarContainer">
+            <p class="avatarName">Maulana</p>
+            <p class="avatarDescription">Staff Surabaya</p>
+            <button class="buttonEdit" onclick="toggleEdit()">
+              Edit Profile
+            </button>
+          </div>
+          <div class="editContainer deactive">
+            <input type="text" placeholder="Username" class="input" />
+            <div class="input">
+              <input
+                type="password"
+                placeholder="New Password"
+                id="passwordNewView"
+                class="inputPassword"
+              />
+              <img
+                src="../Assets/icon/password_view.png"
+                class="passwordView"
+                id="passwordIconNewView"
+                onclick="togglePassword('passwordNewView', 'passwordIconNewView')"
+                alt="Toggle Password Visibility"
+              />
+            </div>
+            <div class="input">
+              <input
+                type="password"
+                placeholder="Old Password"
+                id="passwordOldView"
+                class="inputPassword"
+              />
+              <img
+                src="../Assets/icon/password_view.png"
+                class="passwordView"
+                id="passwordIconOldView"
+                onclick="togglePassword('passwordOldView', 'passwordIconOldView')"
+                alt="Toggle Password Visibility"
+              />
+            </div>
+            <div class="buttonContainer">
+              <button class="buttonEdit buttonCancel" onclick="toggleEdit()">
+                Cancel
+              </button>
+              <button class="buttonEdit buttonSubmit" onclick="toggleEdit()">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

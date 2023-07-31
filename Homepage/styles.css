@@ -1,0 +1,361 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.mobile {
+  margin: 0;
+  padding: 0;
+  width: 390px;
+  background: #ed1c24;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.imageBackground1 {
+  left: -315px;
+  top: -275px;
+  position: absolute;
+  z-index: -1;
+}
+
+.imageBackground2 {
+  top: 450px;
+  right: -340px;
+  position: absolute;
+  z-index: -1;
+}
+
+.imageBackground3 {
+  bottom: -300px;
+  left: -450px;
+  position: absolute;
+  z-index: -1;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.container {
+  width: 350px;
+  margin-top: 50px;
+}
+
+.navbar {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 390px;
+  position: fixed;
+  z-index: 15;
+}
+
+.navbarContainer {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  z-index: 16;
+}
+
+.navbarLogo {
+  width: 177px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.navbarAvatar {
+  width: 35px;
+  height: 35px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #151515;
+  margin-right: 20px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.navbarAvatar:hover {
+  opacity: 70%;
+}
+
+.modalPopUp {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 213px;
+  height: 100px;
+  background: #fff;
+  z-index: 14;
+  border-radius: 0 0 0 10px;
+  display: none;
+  flex-direction: column;
+}
+
+.modalPopUp.active {
+  display: flex;
+}
+
+.modalPopUpMenu {
+  width: calc(100%-30px);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 15px 10px 15px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.modalPopUpMenu:hover {
+  opacity: 70%;
+}
+
+.LastPopUp {
+  background: transparent;
+}
+
+.modalPopUpAvatar {
+  width: 28px;
+  height: 28px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #151515;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.modalPopUpName {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.welcomeText {
+  color: #fff;
+  font-family: Lato;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px 0 20px 0;
+}
+
+.menuTitle {
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 30px 0 15px 0;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  max-width: 350px;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carouselImg {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.activities {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menuContainer {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menuContainer:hover {
+  opacity: 80%;
+}
+
+.menuImage {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.overlayMenuContainer {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuName {
+  padding: 10px 0 0px 0;
+  color: #fff;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px; /* Adjust this value to control the distance between text and underline */
+  border-bottom: 2px solid #fff; /* Adjust the thickness and color of the underline */
+  text-align: center; /* Center the text horizontally */
+}
+
+.subMenuActivities {
+  margin-bottom: 100px;
+}
+
+.subMenuField {
+  display: none;
+  flex-direction: row;
+  padding-top: 15px;
+  gap: 25px;
+}
+
+.subMenuField.active {
+  display: flex;
+}
+
+.subMenuMarket {
+  display: none;
+  flex-direction: row;
+  padding-top: 15px;
+  gap: 25px;
+}
+
+.subMenuMarket.active {
+  display: flex;
+}
+
+.subMenuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 65px;
+  cursor: pointer;
+}
+
+.subMenuContainer:hover {
+  opacity: 70%;
+}
+
+.subMenuImageContainer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.subMenuImage {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.subMenuName {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.dashboardName {
+  max-width: 90px;
+  color: white;
+  text-align: center;
+  font-weight: 80px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dashboardContent {
+  margin-top: 15px;
+  width: 320px;
+  min-height: 170px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
