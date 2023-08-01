@@ -4,11 +4,11 @@ function togglePassword(input, icon) {
 
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
-    passwordIcon.src = "../Assets/icon/password_not_view.png"; // Replace with the path to your eye-off icon
+    passwordIcon.src = "../Assets/icon/password_not_view_white.png"; // Replace with the path to your eye-off icon
     passwordIcon.alt = "Hide Password";
   } else {
     passwordInput.type = "password";
-    passwordIcon.src = "../Assets/icon/password_view.png"; // Replace with the path to your eye icon
+    passwordIcon.src = "../Assets/icon/password_view_white.png"; // Replace with the path to your eye icon
     passwordIcon.alt = "Show Password";
   }
 }

@@ -18,7 +18,7 @@ p {
   padding: 0;
   width: 390px;
   min-height: 100vh;
-  background: #ed1c24;
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +163,7 @@ p {
   margin-top: 25px;
   width: 30px;
   height: 30px;
-  background: #fff;
+  background: #ed1c24;
   border-radius: 30px;
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
   display: flex;
@@ -213,13 +213,13 @@ p {
 }
 
 .avatarName {
-  color: #fff;
+  color: #151515;
   font-size: 36px;
   font-weight: bold;
 }
 
 .avatarDescription {
-  color: #fff;
+  color: #151515;
   font-size: 28px;
 }
 
@@ -267,12 +267,17 @@ p {
   border: none;
   outline: none;
   font-size: 16px;
-  background: #fff;
+  background: #ed1c24;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
 }
 
 .inputPassword {
@@ -282,6 +287,7 @@ p {
   background: transparent;
   font-size: 16px;
   width: 90%;
+  color: #fff;
 }
 
 .passwordView {

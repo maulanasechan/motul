@@ -15,9 +15,9 @@
   </head>
   <body>
     <div class="mobile">
-      <img src="../Assets/background/Vector1.png" class="imageBackground1" />
+      <!-- <img src="../Assets/background/Vector1.png" class="imageBackground1" />
       <img src="../Assets/background/Vector2.png" class="imageBackground2" />
-      <img src="../Assets/background/Vector1.png" class="imageBackground3" />
+      <img src="../Assets/background/Vector1.png" class="imageBackground3" /> -->
       <div class="navbar">
         <div class="navbarContainer">
           <img
@@ -84,96 +84,105 @@
             <!-- Add more carousel-slide elements for additional images -->
           </div>
         </div>
-        <p class="menuTitle">Your Activities</p>
-        <div class="activities">
-          <div class="menuContainer" onclick="toggleMenu('Field')">
-            <div
-              class="menuImage"
-              style="
-                background-image: url('../Assets/menuImage/fieldForceManagement.jpg');
-              "
-            >
-              <div class="overlayMenuContainer">
-                <img src="../Assets/menuImage/iconFieldForceManagement.png" />
-              </div>
-            </div>
-            <p class="menuName">
-              <span class="menuNameField" id="menuName"
-                >Field Force Management</span
+      </div>
+      <div class="activitiesContainer">
+        <div class="container">
+          <p class="menuTitle">Your Activities</p>
+          <div class="activities">
+            <div class="menuContainer" onclick="toggleMenu('Field')">
+              <div
+                class="menuImage"
+                style="
+                  background-image: url('../Assets/menuImage/fieldForceManagement.jpg');
+                "
               >
-            </p>
-          </div>
-          <div class="menuContainer" onclick="toggleMenu('Market')">
-            <div
-              class="menuImage"
-              style="
-                background-image: url('../Assets/menuImage/marketActivity.jpg');
-              "
-            >
-              <div class="overlayMenuContainer">
-                <img src="../Assets/menuImage/iconMarketActivity.png" />
+                <div class="overlayMenuContainer">
+                  <p class="menuName">
+                    <span class="menuNameField" id="menuName"
+                      >Field Force Management</span
+                    >
+                  </p>
+                </div>
               </div>
             </div>
-            <p class="menuName">
-              <span class="menuNameMarket" id="menuName">Market Activity</span>
-            </p>
+            <div class="menuContainer" onclick="toggleMenu('Market')">
+              <div
+                class="menuImage"
+                style="
+                  background-image: url('../Assets/menuImage/marketActivity.jpg');
+                "
+              >
+                <div class="overlayMenuContainer">
+                  <p class="menuName">
+                    <span class="menuNameMarket" id="menuName"
+                      >Market Activity</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="subMenuField" id="subMenu">
+            <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+              <div class="subMenuImageContainer">
+                <img
+                  src="../Assets/icon/sales_review.png"
+                  class="subMenuImage"
+                />
+              </div>
+              <p class="subMenuName">Sales Review</p>
+            </div>
+            <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+              <div class="subMenuImageContainer">
+                <img
+                  src="../Assets/icon/business_review.png"
+                  class="subMenuImage"
+                />
+              </div>
+              <p class="subMenuName">Business Review</p>
+            </div>
+            <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+              <div class="subMenuImageContainer">
+                <img
+                  src="../Assets/icon/adminitration_work.png"
+                  class="subMenuImage"
+                />
+              </div>
+              <p class="subMenuName">Admin Work</p>
+            </div>
+          </div>
+          <div class="subMenuMarket" id="subMenu">
+            <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+              <div class="subMenuImageContainer">
+                <img src="../Assets/icon/join_visit.png" class="subMenuImage" />
+              </div>
+              <p class="subMenuName">Join Visit</p>
+            </div>
+            <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+              <div class="subMenuImageContainer">
+                <img
+                  src="../Assets/icon/field_tracking.png"
+                  class="subMenuImage"
+                />
+              </div>
+              <p class="subMenuName">Field Tracking</p>
+            </div>
+            <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
+              <div class="subMenuImageContainer">
+                <img
+                  src="../Assets/icon/account_development.png"
+                  class="subMenuImage"
+                />
+              </div>
+              <p class="subMenuName">Account Dev</p>
+            </div>
           </div>
         </div>
-        <div class="subMenuField" id="subMenu">
-          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
-            <div class="subMenuImageContainer">
-              <img src="../Assets/icon/sales_review.png" class="subMenuImage" />
-            </div>
-            <p class="subMenuName">Sales Review</p>
-          </div>
-          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
-            <div class="subMenuImageContainer">
-              <img
-                src="../Assets/icon/business_review.png"
-                class="subMenuImage"
-              />
-            </div>
-            <p class="subMenuName">Business Review</p>
-          </div>
-          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
-            <div class="subMenuImageContainer">
-              <img
-                src="../Assets/icon/adminitration_work.png"
-                class="subMenuImage"
-              />
-            </div>
-            <p class="subMenuName">Adminitration Work</p>
-          </div>
-        </div>
-        <div class="subMenuMarket" id="subMenu">
-          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
-            <div class="subMenuImageContainer">
-              <img src="../Assets/icon/join_visit.png" class="subMenuImage" />
-            </div>
-            <p class="subMenuName">Join Visit</p>
-          </div>
-          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
-            <div class="subMenuImageContainer">
-              <img
-                src="../Assets/icon/field_tracking.png"
-                class="subMenuImage"
-              />
-            </div>
-            <p class="subMenuName">Field Tracking</p>
-          </div>
-          <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
-            <div class="subMenuImageContainer">
-              <img
-                src="../Assets/icon/account_development.png"
-                class="subMenuImage"
-              />
-            </div>
-            <p class="subMenuName">Account Development</p>
-          </div>
-        </div>
+      </div>
+      <div class="container">
         <div class="dashboard">
           <p
-            class="dashboardName underline dashboardTime"
+            class="dashboardName underline_black dashboardTime"
             id="dashboardTop"
             onclick="toggleDashboardTop('Time')"
           >
@@ -199,7 +208,7 @@
         </div>
         <div class="dashboard">
           <p
-            class="dashboardName underline dashboardMarket"
+            class="dashboardName underline_black dashboardMarket"
             id="dashboardBottom"
             onclick="toggleDashboardBottom('Market')"
           >

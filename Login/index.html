@@ -11,14 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="../logo/motulRed.ico" />
+    <link rel="icon" type="image/x-icon" href="../Assets/logo/motulRed.ico" />
   </head>
   <body>
     <div class="mobile">
-      <img src="../Assets/background/Vector1.png" class="imageBackground1" />
-      <img src="../Assets/background/Vector2.png" class="imageBackground2" />
-      <img src="../Assets/logo/logoWhite.png" class="logo" />
-      <img src="../Assets/background/People.png" class="people" />
+      <!-- <img src="../Assets/background/Vector1.png" class="imageBackground1" />
+      <img src="../Assets/background/Vector2.png" class="imageBackground2" /> -->
+      <img src="../Assets/logo/logoRed.png" class="logo" />
+      <img src="../Assets/background/people_red.svg" class="people" />
       <div class="inputContainer">
         <input type="text" placeholder="Username" class="input" />
         <div class="input">
@@ -29,14 +29,11 @@
             class="inputPassword"
           />
           <img
-            src="../Assets/icon/password_view.png"
-            class="passwordView active"
-            onclick="togglePassword('passwordView')"
-          />
-          <img
-            src="../Assets/icon/password_not_view.png"
-            class="passwordNotView"
-            onclick="togglePassword('passwordNotView')"
+            src="../Assets/icon/password_view_white.png"
+            class="passwordView"
+            id="passwordIconView"
+            onclick="togglePassword('passwordView', 'passwordIconView')"
+            alt="Toggle Password Visibility"
           />
         </div>
 

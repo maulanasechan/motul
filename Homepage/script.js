@@ -67,20 +67,20 @@ function toggleDashboardTop(name) {
   var dashboardName = document.querySelector(`.dashboard${name}`);
   var dashboards = document.querySelectorAll("#dashboardTop");
   dashboards.forEach(function (dashboard) {
-    dashboard.classList.remove("underline");
+    dashboard.classList.remove("underline_black");
   });
 
-  dashboardName.classList.add("underline");
+  dashboardName.classList.add("underline_black");
 }
 
 function toggleDashboardBottom(name) {
   var dashboardName = document.querySelector(`.dashboard${name}`);
   var dashboards = document.querySelectorAll("#dashboardBottom");
   dashboards.forEach(function (dashboard) {
-    dashboard.classList.remove("underline");
+    dashboard.classList.remove("underline_black");
   });
 
-  dashboardName.classList.add("underline");
+  dashboardName.classList.add("underline_black");
 }
 
 function togglePopUp() {

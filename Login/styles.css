@@ -18,7 +18,7 @@ p {
   padding: 0;
   width: 390px;
   min-height: 100vh;
-  background: #ed1c24;
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,12 +69,17 @@ p {
   border: none;
   outline: none;
   font-size: 16px;
-  background: #fff;
+  background: #ed1c24;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
 }
 
 .inputPassword {
@@ -84,27 +89,13 @@ p {
   background: transparent;
   font-size: 16px;
   width: 90%;
-}
-
-.passwordView {
-  display: none;
-}
-
-.passwordView.active {
-  display: block;
-}
-
-.passwordNotView {
-  display: none;
-}
-
-.passwordNotView.active {
-  display: block;
+  color: #fff;
 }
 
 .forgotPassword {
   font-size: 14px;
-  color: #fff;
+  color: #151515;
+  cursor: pointer;
 }
 
 .buttonLogin {
