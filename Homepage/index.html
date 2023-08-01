@@ -81,72 +81,62 @@
                 class="carouselImg"
               />
             </div>
-            <!-- Add more carousel-slide elements for additional images -->
           </div>
         </div>
-      </div>
-      <div class="activitiesContainer">
-        <div class="container">
+
+        <div class="activitiesContainer">
           <p class="menuTitle">Your Activities</p>
           <div class="activities">
-            <div class="menuContainer" onclick="toggleMenu('Field')">
-              <div
-                class="menuImage"
-                style="
-                  background-image: url('../Assets/menuImage/fieldForceManagement.jpg');
-                "
-              >
-                <div class="overlayMenuContainer">
-                  <p class="menuName">
-                    <span class="menuNameField" id="menuName"
-                      >Field Force Management</span
-                    >
-                  </p>
-                </div>
+            <div
+              class="menuImage"
+              style="
+                background-image: url('../Assets/menuImage/fieldForceManagement2.jpg');
+              "
+              onclick="toggleMenu('Field')"
+            >
+              <div class="overlayMenuContainer">
+                <p class="menuName">
+                  <span
+                    class="menuNameField"
+                    style="max-width: 100px"
+                    id="menuName"
+                    >Field Force Management</span
+                  >
+                </p>
               </div>
             </div>
-            <div class="menuContainer" onclick="toggleMenu('Market')">
-              <div
-                class="menuImage"
-                style="
-                  background-image: url('../Assets/menuImage/marketActivity.jpg');
-                "
-              >
-                <div class="overlayMenuContainer">
-                  <p class="menuName">
-                    <span class="menuNameMarket" id="menuName"
-                      >Market Activity</span
-                    >
-                  </p>
-                </div>
+            <div
+              class="menuImage"
+              style="
+                background-image: url('../Assets/menuImage/marketActivity.jpg');
+              "
+              onclick="toggleMenu('Market')"
+            >
+              <div class="overlayMenuContainer">
+                <p class="menuName">
+                  <span class="menuNameMarket" id="menuName"
+                    >Market Activity</span
+                  >
+                </p>
               </div>
             </div>
           </div>
           <div class="subMenuField" id="subMenu">
             <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
               <div class="subMenuImageContainer">
-                <img
-                  src="../Assets/icon/sales_review.png"
-                  class="subMenuImage"
-                />
+                <img src="../Assets/icon/sales_review.png" />
               </div>
               <p class="subMenuName">Sales Review</p>
             </div>
             <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
               <div class="subMenuImageContainer">
-                <img
-                  src="../Assets/icon/business_review.png"
-                  class="subMenuImage"
-                />
+                <img src="../Assets/icon/business_review.png" />
               </div>
               <p class="subMenuName">Business Review</p>
             </div>
             <div class="subMenuContainer" onclick="toggleSubMenu('google.com')">
               <div class="subMenuImageContainer">
-                <img
-                  src="../Assets/icon/adminitration_work.png"
-                  class="subMenuImage"
-                />
+                <img src="../Assets/icon/adminitration_work.png" />
               </div>
               <p class="subMenuName">Admin Work</p>
             </div>
@@ -178,63 +168,78 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
         <p class="menuTitle dashboardTitle">Your Performances</p>
         <div class="dashboard">
           <p
-            class="dashboardName underline_black dashboardTime"
-            id="dashboardTop"
-            onclick="toggleDashboardTop('Time')"
+            class="dashboardName underline_black dashboardTop"
+            id="Time"
+            onclick="toggleDashboardTop('Time', 'chartTime')"
           >
             Time Spend Activity
           </p>
           <p
-            class="dashboardName dashboardField"
-            id="dashboardTop"
-            onclick="toggleDashboardTop('Field')"
+            class="dashboardName dashboardTop"
+            id="Field"
+            onclick="toggleDashboardTop('Field', 'chartField')"
           >
             Field Force Management
           </p>
           <p
-            class="dashboardName dashboardAccount"
-            id="dashboardTop"
-            onclick="toggleDashboardTop('Account')"
+            class="dashboardName dashboardTop"
+            id="Account"
+            onclick="toggleDashboardTop('Account', 'chartAccount')"
           >
             Account Development
           </p>
         </div>
+
         <div class="dashboardContent">
-          <p>hello world</p>
+          <div id="chartTime" class="chartContainer active chartTop"></div>
+          <div id="chartField" class="chartContainer chartTop"></div>
+          <div id="chartAccount" class="chartContainer chartTop"></div>
         </div>
+
         <div class="dashboard">
           <p
-            class="dashboardName underline_black dashboardMarket"
-            id="dashboardBottom"
-            onclick="toggleDashboardBottom('Market')"
+            class="dashboardName dashboardBottom"
+            id="Market"
+            onclick="toggleDashboardBottom('Market', 'chartMarket')"
           >
             Market Activity
           </p>
           <p
-            class="dashboardName dashboardSalesman"
-            id="dashboardBottom"
-            onclick="toggleDashboardBottom('Salesman')"
+            class="dashboardName underline_black dashboardBottom"
+            id="Salesman"
+            onclick="toggleDashboardBottom('Salesman', 'chartSalesman')"
           >
             Salesman Rating
           </p>
           <p
-            class="dashboardName dashboardDashboard"
-            id="dashboardBottom"
-            onclick="toggleDashboardBottom('Dashboard')"
+            class="dashboardName dashboardBottom"
+            id="Production"
+            onclick="toggleDashboardBottom('Production', 'chartProduction')"
           >
-            Dashboard 6
+            Chain Production
           </p>
         </div>
         <div class="dashboardContent">
-          <p>hello world</p>
+          <div id="chartMarket" class="chartContainer chartBottom"></div>
+          <div
+            id="chartSalesman"
+            class="chartContainer active chartBottom"
+          ></div>
+          <div
+            id="chartProduction"
+            class="chartContainer active chartBottom"
+          ></div>
         </div>
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="script.js"></script>
+    <!-- <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script> -->
   </body>
 </html>

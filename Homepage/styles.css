@@ -179,13 +179,15 @@ p {
 }
 
 .activitiesContainer {
-  width: 390px;
+  width: calc(100% - 30px);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   background: #ed1c24;
   margin-top: 25px;
-  padding: 15px 0 15px 0;
+  padding: 15px 15px 20px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 .menuTitle {
@@ -193,9 +195,7 @@ p {
   color: #fff;
   font-family: Lato;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .carousel-container {
@@ -231,46 +231,48 @@ p {
 }
 
 .menuContainer {
-  width: 160px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   margin-bottom: 10px;
 }
 
-.menuContainer:hover {
-  opacity: 80%;
-}
-
 .menuImage {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  cursor: pointer;
+}
+
+.menuImage:hover {
+  opacity: 80%;
 }
 
 .overlayMenuContainer {
-  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(0, 0, 0, 25%);
 }
 
 .menuName {
   padding: 10px 0 0px 0;
   color: #fff;
   font-family: Lato;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 17px;
+  font-weight: bold;
   text-align: center;
-  max-width: 60%;
 }
 
 .underline {
@@ -296,7 +298,7 @@ p {
 .subMenuField {
   display: none;
   flex-direction: row;
-  padding-top: 10px;
+  padding-top: 20px;
   justify-content: space-between;
 }
 
@@ -319,7 +321,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
   cursor: pointer;
 }
 
@@ -328,26 +329,31 @@ p {
 }
 
 .subMenuImageContainer {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 50px;
   background: #fff;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .subMenuImage {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 
 .subMenuName {
-  color: #fff;
-  font-size: 12px;
+  margin-top: 10px;
+  color: #dcdcdc;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
   max-width: 65px;
@@ -356,7 +362,7 @@ p {
 .dashboardTitle {
   color: #151515;
   margin-top: 40px;
-  margin-bottom: -20px;
+  margin-bottom: -10px;
 }
 
 .dashboard {
@@ -384,4 +390,14 @@ p {
   background: #ed1c24;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.5);
   padding: 15px;
+}
+
+.chartContainer {
+  height: 170px;
+  width: 100%;
+  display: none;
+}
+
+.chartContainer.active {
+  display: block;
 }
