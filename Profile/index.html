@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="../Assets/logo/motulRed.ico" />
   </head>
   <body>
-    <div class="mobile">
+    <div class="container">
       <!-- <img src="../Assets/background/Vector1.png" class="imageBackground1" />
       <img src="../Assets/background/Vector2.png" class="imageBackground2" /> -->
       <div class="navbar">
@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="overlay" onclick="togglePopUp()"></div>
-      <div class="container">
+      <div class="profile">
         <div
           class="backButton"
           onclick="window.location.href='../Homepage/index.html'"
@@ -62,7 +62,19 @@
           <img src="../Assets/icon/back.png" />
         </div>
         <div class="profileContainer">
-          <img src="../Assets/avatar/avatarProfile.png" class="avatarProfile" />
+          <div class="imageContainer">
+            <img
+              src="../Assets/avatar/avatarProfile.png"
+              class="avatarProfile"
+            />
+            <div class="file-input-label deactive">
+              <input type="file" id="fileInput" />
+              <img
+                src="../Assets/icon/adminitration_work.png"
+                class="file-input-icon"
+              />
+            </div>
+          </div>
           <div class="avatarContainer">
             <p class="avatarName">Maulana</p>
             <p class="avatarDescription">Staff Surabaya</p>

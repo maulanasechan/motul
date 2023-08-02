@@ -14,10 +14,10 @@ p {
   padding: 0;
 }
 
-.mobile {
+.container {
   margin: 0;
   padding: 0;
-  width: 390px;
+  width: 100%;
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,7 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  min-height: 100vh;
 }
 
 .imageBackground1 {
@@ -63,15 +64,16 @@ p {
   display: block;
 }
 
-.container {
-  width: 350px;
+.homepage {
+  width: 330px;
+  margin-top: 50px;
 }
 
 .navbar {
   padding: 0;
   margin: 0;
   height: 50px;
-  width: 390px;
+  width: 100%;
   position: fixed;
   z-index: 15;
 }
@@ -175,7 +177,6 @@ p {
   font-weight: 700;
   line-height: normal;
   padding: 20px 0 20px 0;
-  margin-top: 50px;
 }
 
 .activitiesContainer {
@@ -202,7 +203,6 @@ p {
   overflow: hidden;
   width: 100%;
   height: 200px;
-  max-width: 350px;
   border-radius: 12px;
   margin: 0 auto;
   box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.5);
@@ -218,7 +218,7 @@ p {
 }
 
 .carouselImg {
-  width: 350px;
+  width: 100%;
   height: 200px;
   object-fit: cover;
 }
@@ -384,7 +384,7 @@ p {
 
 .dashboardContent {
   margin-top: 15px;
-  width: 320px;
+  width: 300px;
   min-height: 170px;
   border-radius: 12px;
   background: #ed1c24;
@@ -400,4 +400,105 @@ p {
 
 .chartContainer.active {
   display: block;
+}
+
+@media screen and (min-width: 550px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbarLogo {
+    height: 60px;
+  }
+
+  .navbarAvatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+  }
+
+  .modalPopUp {
+    top: 60px;
+    width: 300px;
+    height: 124px;
+  }
+
+  .modalPopUpMenu {
+    width: calc(100%-40px);
+    gap: 25px;
+    padding: 10px 30px 10px 30px;
+  }
+
+  .modalPopUpAvatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modalPopUpName {
+    font-size: 18px;
+  }
+
+  .homepage {
+    margin-top: 75px;
+    width: calc(100% - 150px);
+  }
+
+  .welcomeText {
+    font-size: 30px;
+  }
+
+  .carousel-container {
+    height: 250px;
+  }
+
+  .carouselImg {
+    height: 250px;
+  }
+
+  .activitiesContainer {
+    width: calc(100% - 60px);
+    background: #ed1c24;
+    margin-top: 30px;
+    padding: 30px 30px 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .menuImage {
+    width: 280px;
+    height: 175px;
+  }
+
+  .subMenuName {
+    max-width: 100%;
+  }
+
+  .menuTitle {
+    font-size: 22px;
+  }
+
+  .dashboardTitle {
+    margin-top: 55px;
+  }
+
+  .dashboardName {
+    max-width: 100%;
+    color: #151515;
+    text-align: center;
+    font-weight: 80px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .dashboardContent {
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    min-height: 190px;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .chartContainer {
+    height: 100%;
+  }
 }
