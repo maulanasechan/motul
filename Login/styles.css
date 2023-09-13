@@ -41,10 +41,20 @@ p {
   z-index: -1;
 }
 
-.logo {
-  margin-top: 80px;
+.logoMotul {
   width: 202px;
   height: 42px;
+}
+
+.logoPower {
+  margin-top: 5px;
+  width: 202px;
+}
+
+.logoContainer {
+  margin-top: 75px;
+  width: 202px;
+  height: auto;
 }
 
 .people {
@@ -124,8 +134,19 @@ input::placeholder {
 }
 
 @media screen and (min-width: 550px) {
-  .logo {
-    margin-top: 100px;
+  .logoMotul {
+    width: 350px;
+    height: auto;
+  }
+
+  .logoPower {
+    margin-top: 10px;
+    width: 350px;
+    height: auto;
+  }
+
+  .logoContainer {
+    margin-top: 90px;
     width: 350px;
     height: auto;
   }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Motul</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="calendar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,6 +13,10 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="../Assets/logo/motulRed.ico" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -58,28 +63,27 @@
       <div class="overlay" onclick="togglePopUp()"></div>
       <div class="homepage">
         <p class="welcomeText">hi, Maulana</p>
-        <div class="carousel-container">
-          <div class="carousel-track">
-            <div class="carousel-slide">
-              <img
-                src="../Assets/imageCarousel/image1.jpg"
-                alt="Image 1"
-                class="carouselImg"
-              />
+
+        <div class="calendar-container">
+          <div class="calendar calendarShadow">
+            <div class="header">
+              <h1 id="monthYear1"></h1>
             </div>
-            <div class="carousel-slide">
-              <img
-                src="../Assets/imageCarousel/image2.jpg"
-                alt="Image 2"
-                class="carouselImg"
-              />
+            <div class="days">
+              <div class="day">Sun</div>
+              <div class="day">Mon</div>
+              <div class="day">Tue</div>
+              <div class="day">Wed</div>
+              <div class="day">Thu</div>
+              <div class="day">Fri</div>
+              <div class="day">Sat</div>
             </div>
-            <div class="carousel-slide">
-              <img
-                src="../Assets/imageCarousel/image3.jpg"
-                alt="Image 3"
-                class="carouselImg"
-              />
+            <div class="dates" id="calendarDates1">
+              <!-- Calendar dates for the first calendar -->
+            </div>
+            <div class="buttonContainer">
+              <button id="prevButton1" class="button">Prev</button>
+              <button id="nextButton1" class="button">Next</button>
             </div>
           </div>
         </div>
@@ -168,44 +172,60 @@
             </div>
           </div>
         </div>
-        <p class="menuTitle dashboardTitle">Your Performances</p>
+        <p class="menuTitle dashboardTitle">Dashboard Performances</p>
         <div class="dashboard">
           <p
             class="dashboardName underline_black dashboardTop"
             id="Time"
             onclick="toggleDashboardTop('Time', 'chartTime')"
           >
-            Time Spend Activity
+            Time Spend
           </p>
           <p
             class="dashboardName dashboardTop"
-            id="Field"
-            onclick="toggleDashboardTop('Field', 'chartField')"
+            id="MJP"
+            onclick="toggleDashboardTop('MJP', 'chartMJP')"
           >
-            Field Force Management
-          </p>
-          <p
-            class="dashboardName dashboardTop"
-            id="Account"
-            onclick="toggleDashboardTop('Account', 'chartAccount')"
-          >
-            Account Development
+            MJP vs Actual
           </p>
         </div>
 
         <div class="dashboardContent">
           <div id="chartTime" class="chartContainer active chartTop"></div>
-          <div id="chartField" class="chartContainer chartTop"></div>
-          <div id="chartAccount" class="chartContainer chartTop"></div>
+          <div id="chartMJP" class="chartContainer chartTop">
+            <div class="calendar-container">
+              <div class="calendar">
+                <div class="header">
+                  <h1 id="monthYear2"></h1>
+                </div>
+                <div class="days">
+                  <div class="day">Sun</div>
+                  <div class="day">Mon</div>
+                  <div class="day">Tue</div>
+                  <div class="day">Wed</div>
+                  <div class="day">Thu</div>
+                  <div class="day">Fri</div>
+                  <div class="day">Sat</div>
+                </div>
+                <div class="dates" id="calendarDates2">
+                  <!-- Calendar dates for the second calendar -->
+                </div>
+                <div class="buttonContainer" style="display: none">
+                  <button id="prevButton2" class="button">Prev</button>
+                  <button id="nextButton2" class="button">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="dashboard">
           <p
             class="dashboardName dashboardBottom"
-            id="Market"
-            onclick="toggleDashboardBottom('Market', 'chartMarket')"
+            id="Account"
+            onclick="toggleDashboardBottom('Account', 'chartAccount')"
           >
-            Market Activity
+            Account Development
           </p>
           <p
             class="dashboardName underline_black dashboardBottom"
@@ -214,21 +234,13 @@
           >
             Salesman Rating
           </p>
-          <p
-            class="dashboardName dashboardBottom"
-            id="Production"
-            onclick="toggleDashboardBottom('Production', 'chartProduction')"
-          >
-            Chain Production
-          </p>
         </div>
         <div class="dashboardContent">
-          <div id="chartMarket" class="chartContainer chartBottom"></div>
+          <div id="chartAccount" class="chartContainer chartBottom"></div>
           <div
             id="chartSalesman"
             class="chartContainer active chartBottom"
           ></div>
-          <div id="chartProduction" class="chartContainer chartBottom"></div>
         </div>
       </div>
     </div>
@@ -237,6 +249,7 @@
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
     <script src="script.js"></script>
+    <script src="calender.js"></script>
     <!-- <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script> -->
   </body>
 </html>

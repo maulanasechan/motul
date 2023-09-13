@@ -370,7 +370,9 @@ p {
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
+  gap: 20px;
 }
 
 .dashboardName {
@@ -393,7 +395,7 @@ p {
 }
 
 .chartContainer {
-  height: 170px;
+  height: auto;
   width: 100%;
   display: none;
 }
